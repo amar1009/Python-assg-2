@@ -3,8 +3,6 @@ Python milesstone2
 
 Port & Service Analysis
 
-Now we analyse security meaning, not just listing.
-
 Port 22 – SSH
 
 Purpose: Secure remote login
@@ -42,8 +40,6 @@ Purpose: Test/demo
 Security Risk:
 
 Could indicate non-standard service
-
-Needs further investigation in real-world case
 
 
 
