@@ -5,16 +5,16 @@ import base64
 import sys
 
 
-# ==========================
+
 # CONFIGURATION
-# ==========================
+
 TARGET_HOST = "scanme.nmap.org"
-VT_API_KEY = "YOUR_VIRUSTOTAL_API_KEY"   # Replace with your API key
+VT_API_KEY = "SAMPLE_KEY"   # Original key not shared
 
 
-# ==========================
+
 # NMAP SCANNING FUNCTION
-# ==========================
+
 def run_nmap_scan(target):
     print("=" * 70)
     print("NETWORK RECONNAISSANCE REPORT")
@@ -78,10 +78,8 @@ def run_nmap_scan(target):
         print(f"[!] Error during Nmap scan: {error}")
         return None
 
-
-# ==========================
 # VIRUSTOTAL FUNCTION
-# ==========================
+
 def query_virustotal(url):
     print("\n" + "=" * 70)
     print("VIRUSTOTAL INTELLIGENCE REPORT")
@@ -109,10 +107,7 @@ def query_virustotal(url):
         print(f"[!] Error querying VirusTotal: {error}")
         return None
 
-
-# ==========================
 # VIRUSTOTAL ANALYSIS
-# ==========================
 def analyze_vt_data(vt_data):
     if not vt_data:
         print("[-] No VirusTotal data available.")
@@ -146,11 +141,11 @@ def analyze_vt_data(vt_data):
 
         print("\nSecurity Interpretation:")
         if malicious_count > 0:
-            print("  ⚠️  Malicious detections found!")
+            print(" Malicious detections found!")
         elif suspicious_count > 0:
-            print("  ⚠️  Suspicious indicators detected.")
+            print(" Suspicious indicators detected.")
         else:
-            print("  ✅ No engines flagged this URL as malicious.")
+            print(" No engines flagged this URL as malicious.")
 
     except KeyError:
         print("[!] Unexpected VirusTotal response structure.")
